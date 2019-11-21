@@ -89,6 +89,7 @@ def upload_to_dropbox(target_file_name, source_file, dropbox_token, dropbox_fold
 
     # Upload the file
     r = requests.post(DROPBOX_UPLOAD_URL, data=open(source_file, 'rb'), headers=headers)
+    print(r.status_code)
 
     if r.status_code != requests.codes.ok:
         print("Failed: upload file to Dropbox: {errcode}".format(errcode=r.status_code))
@@ -99,6 +100,7 @@ def upload_to_dropbox(target_file_name, source_file, dropbox_token, dropbox_fold
 
     # Share and return downloadable url
     r = requests.post(DROPBOX_SHARE_URL, data=json.dumps(DROPBOX_SHARE_DATA), headers=headers)
+    print(r.status_code)
 
     if r.status_code != requests.codes.ok:
         print("Failed: get share link from Dropbox {errcode}".format(errcode=r.status_code))

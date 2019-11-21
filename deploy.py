@@ -112,6 +112,9 @@ def upload_to_dropbox(target_file_name, source_file, dropbox_token, dropbox_fold
 
 
 def send_email(zapier_hook, to, subject, body):
+    
+    print("zapier_hook (str): { " + zapier_hook + " } \n to (str): { " + to + " } \n subject (str): { " + subject + " } \n body (str): { " + body +" }")
+    
     '''Send email with zapier hook
     
     Args:

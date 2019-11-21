@@ -100,7 +100,7 @@ def upload_to_dropbox(target_file_name, source_file, dropbox_token, dropbox_fold
 
     # Share and return downloadable url
     r = requests.post(DROPBOX_SHARE_URL, data=json.dumps(DROPBOX_SHARE_DATA), headers=headers)
-    print(r.status_code)
+    print(json.dumps(DROPBOX_SHARE_DATA))
 
     if r.status_code != requests.codes.ok:
         print("Failed: get share link from Dropbox {errcode}".format(errcode=r.status_code))

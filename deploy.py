@@ -31,7 +31,7 @@ OUTPUT_FILE_PARSING_ERROR = 5
 DROPBOX_UPLOAD_ARGS = {
     'path': None,
     'mode': 'overwrite',
-    'autorename': True,https://gitlab.digital-lab.ru:2443/ehidirnabiev/apk-release-deploy.git
+    'autorename': True,
     'strict_conflict': True
 }
 DROPBOX_UPLOAD_URL = 'https://content.dropboxapi.com/2/files/upload'

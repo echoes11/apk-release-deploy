@@ -107,6 +107,7 @@ def upload_to_dropbox(target_file_name, source_file, dropbox_token, dropbox_fold
         return None
 
     # Replace the '0' at the end of the url with '1' for direct download
+    print(re.sub('dl=.*', 'raw=1', r.json()['url']))
     return re.sub('dl=.*', 'raw=1', r.json()['url'])
 
 

@@ -57,6 +57,9 @@ ZAPIER_SEND_DATA = {
 
 
 def upload_to_dropbox(target_file_name, source_file, dropbox_token, dropbox_folder):
+    
+    print("target_file_name (str): {target_file_name} \n source_file (str): {source_file} \n dropbox_token (str): { dropbox_token } \n dropbox_folder (str): { dropbox_folder }")
+    
     '''Upload file to dropbox
     
     Args:
